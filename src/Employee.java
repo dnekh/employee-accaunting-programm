@@ -1,58 +1,83 @@
 public class Employee {
 
-    private String fullName;
+    private String name;
     private String position;
     private int age;
     private int experience;
-    private static int countOfStaff = 0;
+    private int salary;
+    private static int countOfEmp = 0;
 
 
     public Employee() {
-
+        countOfEmp++;
     }
 
-    public Employee(String fullName, String position, int age, int experience) {
-        this.fullName = fullName;
+    public Employee(String name, String position, int age, int experience) {
+        this.name = name;
         this.position = position;
         this.age = age;
         this.experience = experience;
-        countOfStaff++;
+        countOfEmp++;
     }
 
-    public String getFullName() {
-        return fullName;
+    public Employee(String name, String position, int age, int experience, int salary) {
+        this.name = name;
+        this.position = position;
+        this.age = age;
+        this.experience = experience;
+        this.salary = salary;
+        countOfEmp++;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+
+    public void getTextInfo() {
+        System.out.println("Сотрудник компании: " + name + "\nВозраст: " + age + " лет\nДолжность: " + position + "\n");;
+    }
+
+    public void getCountOfEmp() {
+        System.out.println("The company has " + countOfEmp + " employees");
+    }
+
+
+    //getters
+    public String getName() {
+        return name;
     }
 
     public String getPosition() {
         return position;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
-    }
-
     public int getAge() {
         return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
     }
 
     public int getExperience() {
         return experience;
     }
 
+    public int getSalary() {
+        return salary;
+    }
+
+    //setters
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public void setExperience(int experience) {
         this.experience = experience;
     }
 
-    @Override
-    public String toString() {
-        return "Сотрудник компании: " + fullName + "\nВозраст: " + age + " лет\nДолжность: " + position;
+    public void setSalary(int salary) {
+        this.salary = salary;
     }
 }
