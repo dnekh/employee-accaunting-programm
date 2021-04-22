@@ -1,10 +1,10 @@
 public class Employee {
 
-    private String name;
-    private String position;
-    private int age;
-    private int experience;
-    private int salary;
+    protected String name;
+    protected String position;
+    protected int age;
+    protected int experience;
+    protected int salary;
     private static int countOfEmp = 0;
 
 
@@ -12,10 +12,9 @@ public class Employee {
         countOfEmp++;
     }
 
-    public Employee(String name, String position, int age, int experience) {
+    public Employee(String name, String position, int experience) {
         this.name = name;
         this.position = position;
-        this.age = age;
         this.experience = experience;
         countOfEmp++;
     }
@@ -30,8 +29,12 @@ public class Employee {
     }
 
 
-    public void getTextInfo() {
-        System.out.println("Сотрудник компании: " + name + "\nВозраст: " + age + " лет\nДолжность: " + position + "\n");;
+    public void getFullTextInfo() {
+        System.out.println("Сотрудник компании: " + name
+                + "\nВозраст: " + age
+                + "\nДолжность: " + position
+                + "\nСтаж в компании: " + experience
+                + "\nЗарплата: " + salary);
     }
 
     public void getCountOfEmp() {
