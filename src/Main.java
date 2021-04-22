@@ -2,11 +2,15 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Employee employee = new Programmer("Meow Moore", "Программист", 30, 5,
-                100000, "Java");
-        Employee employee1 = new Employee();
-        Employee employee2 = new Employee();
-        employee.getFullTextInfo();
+        Employee employee = new Employee();
+        Employee empProg = new Programmer("Meow Moore", "Программист", 30, 5,
+                100_000, "Java");
+        Employee empDes = new Designer("Super Mors", "Дизайнер", 25, 3,
+                70_000, "Adobe Illustrator");
+        //employee.getFullTextInfo();
+        empProg.getFullTextInfo();
+        System.out.println();
+        empDes.getFullTextInfo();
         employee.getCountOfEmp();
     }
 }

@@ -21,14 +21,14 @@ public class Designer extends Employee {
 
     public void getFullTextInfo() {
         super.getFullTextInfo();
-        System.out.println("Язык программирования : " + designProgram + "\n");
+        System.out.println("Работает в программе : " + designProgram + "\n");
     }
 
     //getters
     public String getDesignProgram() {
         return designProgram;
     }
-    
+
     //setters
     public void setDesignProgram(String designProgram) {
         this.designProgram = designProgram;
