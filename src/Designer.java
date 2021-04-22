@@ -1,5 +1,36 @@
 public class Designer extends Employee {
-    public Designer(String fullName, String position, int experience) {
-        super(fullName, position, experience);
+
+
+    private String designProgram;
+
+    //constructors
+    public Designer() {
+
+    }
+
+    public Designer(String name, String designProgram, int experience) {
+        super.name = name;
+        this.designProgram = designProgram;
+        super.experience = experience;
+    }
+
+    public Designer(String name, String position, int age, int experience, int salary, String designProgram) {
+        super(name, position, age, experience, salary);
+        this.designProgram = designProgram;
+    }
+
+    public void getFullTextInfo() {
+        super.getFullTextInfo();
+        System.out.println("Язык программирования : " + designProgram + "\n");
+    }
+
+    //getters
+    public String getDesignProgram() {
+        return designProgram;
+    }
+    
+    //setters
+    public void setDesignProgram(String designProgram) {
+        this.designProgram = designProgram;
     }
 }

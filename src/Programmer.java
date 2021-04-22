@@ -1,7 +1,9 @@
 public class Programmer extends Employee {
 
+
     private String language;
 
+    //constructors
     public Programmer() {
 
     }
@@ -20,6 +22,16 @@ public class Programmer extends Employee {
     @Override
     public void getFullTextInfo() {
         super.getFullTextInfo();
-        System.out.println("Язык программирования : " + language);
+        System.out.println("Язык программирования : " + language + "\n");
+    }
+
+    //getters
+    public String getLanguage() {
+        return language;
+    }
+
+    //setters
+    public void setLanguage(String language) {
+        this.language = language;
     }
 }
