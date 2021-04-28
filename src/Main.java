@@ -13,5 +13,7 @@ public class Main {
         System.out.println();
         empDes.getFullTextInfo();
         employee.getCountOfEmp();
+
+        System.out.println();
     }
 }
