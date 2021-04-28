@@ -1,3 +1,7 @@
+import com.anycompany.base.Designer;
+import com.anycompany.base.Employee;
+import com.anycompany.base.Programmer;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -13,5 +17,7 @@ public class Main {
         System.out.println();
         empDes.getFullTextInfo();
         employee.getCountOfEmp();
+
+        System.out.println();
     }
 }
