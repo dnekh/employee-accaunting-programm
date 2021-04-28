@@ -6,24 +6,33 @@ public class Designer extends Employee {
     private String designProgram;
 
     //constructors
-    public Designer() {
-
-    }
-
-    public Designer(String name, String designProgram, int experience) {
-        super.name = name;
-        this.designProgram = designProgram;
-        super.experience = experience;
-    }
-
-    public Designer(String name, String position, int age, int experience, int salary, String designProgram) {
-        super(name, position, age, experience, salary);
+    public Designer(String name, String lastname, int age, String position, int experience, int salary,
+                    String designProgram) {
+        super(name, lastname, age, position, experience, salary);
         this.designProgram = designProgram;
     }
 
-    public void getFullTextInfo() {
-        super.getFullTextInfo();
-        System.out.println("Работает в программе : " + designProgram + "\n");
+
+    @Override
+    public void getEmpInfo() {
+        toString();
+    }
+
+    @Override
+    public void getCountOfEmp() {
+        System.out.println(countOfEmp);
+    }
+
+    @Override
+    public String toString() {
+        return "Сотрудник компании: "
+                + "\nИмя: " + name
+                + "\nФамилия: " + lastname
+                + "\nВозраст: " + age
+                + "\nДолжность: " + position
+                + "\nСтаж в компании (лет): " + experience
+                + "\nЗарплата: " + salary
+                + "\nРабочая программа: " + designProgram + "\n";
     }
 
     //getters

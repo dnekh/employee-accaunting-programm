@@ -1,47 +1,30 @@
 package com.anycompany.base;
 
-public class Employee {
+abstract public class Employee {
 
     protected String name;
-    protected String position;
+    protected String lastname;
     protected int age;
+    protected String position;
     protected int experience;
     protected int salary;
-    private static int countOfEmp = 0;
+    static int countOfEmp = 0;
 
 
-    public Employee() {
-        countOfEmp++;
-    }
-
-    public Employee(String name, String position, int experience) {
+    public Employee(String name, String lastname, int age, String position, int experience, int salary) {
         this.name = name;
-        this.position = position;
-        this.experience = experience;
-        countOfEmp++;
-    }
-
-    public Employee(String name, String position, int age, int experience, int salary) {
-        this.name = name;
-        this.position = position;
+        this.lastname = lastname;
         this.age = age;
+        this.position = position;
         this.experience = experience;
         this.salary = salary;
         countOfEmp++;
     }
 
 
-    public void getFullTextInfo() {
-        System.out.println("Сотрудник компании: " + name
-                + "\nВозраст: " + age
-                + "\nДолжность: " + position
-                + "\nСтаж в компании: " + experience
-                + "\nЗарплата: " + salary);
-    }
+    abstract public void getEmpInfo();
 
-    public void getCountOfEmp() {
-        System.out.println("The company has " + countOfEmp + " employees");
-    }
+    abstract public void getCountOfEmp();
 
 
     //getters
@@ -49,12 +32,16 @@ public class Employee {
         return name;
     }
 
-    public String getPosition() {
-        return position;
+    public String getLastname() {
+        return lastname;
     }
 
     public int getAge() {
         return age;
+    }
+
+    public String getPosition() {
+        return position;
     }
 
     public int getExperience() {
@@ -65,17 +52,22 @@ public class Employee {
         return salary;
     }
 
+
     //setters
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 
     public void setExperience(int experience) {
