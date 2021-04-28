@@ -1,3 +1,5 @@
+package com.anycompany.base;
+
 public class Designer extends Employee {
 
 

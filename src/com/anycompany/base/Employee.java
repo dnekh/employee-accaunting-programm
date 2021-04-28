@@ -1,3 +1,5 @@
+package com.anycompany.base;
+
 public class Employee {
 
     protected String name;
